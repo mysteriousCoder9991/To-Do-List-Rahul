@@ -32,7 +32,7 @@
           
           </ul>
           <marquee behavior="scroll" bgcolor="#808080" loop="-1" width="30%"><i><font color="red">
-         <strong>Current Date and Time is <span id="time">{% now "jS F Y H:i" %}</span></strong>  </font></i></marquee> 
+         <strong>Server Date and Time is <span id="time">{% now "jS F Y H:i" %}</span></strong>  </font></i></marquee> 
         </div>
       </nav>
       <div class="container my-3">
@@ -44,6 +44,7 @@
                 <th scope="col">Task Title</th>
                 <th scope="col">Task Description</th>
                 <th scope="col">Task Saved Time</th>
+                <th scope="col">Task Deadline</th>
               </tr>
             </thead>
             <tbody>
@@ -53,13 +54,14 @@
                 <td>{{task.taskTitle}}</td>
                 <td>{{task.taskDesc}}</td>
                 <td>{{task.time}}</td>
+                <td>{{task.dead}}
               </tr>
               {% endfor %}
             </tbody>
           </table>
       </div>
       <footer class="py-3 bg-dark text-light fixed-bottom">
-        <p class="text-center my-0"> <font color="#FB2666">© Rahul Dhar,2020 | All Rights Reserved</font></p>
+        <p class="text-center my-0"> <font color="#FB2666">Made by Rahul with <font color="red">♥</font>|© Rahul Dhar,2020 | All Rights Reserved</font></p>
     </footer>
 
     <!-- Optional JavaScript -->

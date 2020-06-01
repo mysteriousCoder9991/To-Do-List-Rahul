@@ -36,13 +36,13 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>-->
          <marquee behavior="scroll" bgcolor="#808080" loop="-1" width="30%"><i><font color="white">
-         <strong>Current Date and Time is <span id="time">{% now "jS F Y H:i" %}</span></strong>  </font></i></marquee> 
+         <strong>Server Date and Time is <span id="time">{% now "jS F Y H:i" %}</span></strong>  </font></i></marquee> 
           
         </div>
       </nav>
     {% if success %}
      <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>Rahul Says</strong> task saved: successfully
+  <strong>Rahul Says</strong> task saved: successfully <a href='/tasks'>Click to view now </a>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -61,11 +61,16 @@
               <label for="desc">Task Description</label>
               <textarea  class="form-control" name="desc" id="desc" col="30" rows="10" Required></textarea>
             </div>
+            <div class="form-group">
+              <label for="dead">Task Deadline</label>
+              <input type="text" class="form-control" id="dead" aria-describedby="dead" name="dead" Required>
+              <small id="title" class="form-text text-muted">This is the task deadline</small>
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
       </div>
      <footer class="py-3 bg-dark text-light fixed-bottom">
-        <p class="text-center my-0"><font color="#CCFFE5">© Rahul Dhar,2020 | All Rights Reserved</font></p>
+        <p class="text-center my-0"><font color="#CCFFE5">Made by Rahul with <font color="red">♥</font>| © Rahul Dhar,2020 | All Rights Reserved</font></p>
     </footer>
 
     <!-- Optional JavaScript -->
