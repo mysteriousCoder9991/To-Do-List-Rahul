@@ -7,8 +7,9 @@ def home(request):
     if request.method== "POST":
         title=request.POST['title']
         desc=request.POST['desc']
-        print(title,desc)
-        ins=Task(taskTitle=title,taskDesc=desc)
+        dead=request.POST['dead']
+        #print(title,desc)
+        ins=Task(taskTitle=title,taskDesc=desc,dead=dead)
         ins.save()
         context = {'success':True}
     return render(request,'index.html',context)
